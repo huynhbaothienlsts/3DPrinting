@@ -2,7 +2,7 @@ window.courseConfig = {
   courseName: "Thiết kế và In 3D",
   teacherName: "Huỳnh Bảo Thiên",
   passingScore: 80,
-  sequentialUnlock: true,
+  sequentialUnlock: false,
   saveStudentIdentity: false,
   certificateTemplate: "assets/certificates/3D-Certificate.png",
   classes: [],
