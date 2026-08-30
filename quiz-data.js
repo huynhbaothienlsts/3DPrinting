@@ -1,15 +1,69 @@
 const q=(question,options,answer,explain)=>({question,options,answer,explain});
 window.quizData={
-  1:[q("Sản xuất bồi đắp tạo vật thể bằng cách nào?",["Thêm vật liệu theo lớp","Cắt bỏ vật liệu","Đổ khuôn duy nhất","Uốn tấm kim loại"],0,"In 3D FDM đặt vật liệu theo nhiều lớp."),q("Bước nào diễn ra trước slicing?",["Xuất mô hình","In sản phẩm","Tháo support","Sơn sản phẩm"],0,"Cần có tệp mô hình trước khi cắt lớp."),q("In 3D luôn rẻ nhất khi sản xuất hàng triệu sản phẩm.",["Đúng","Sai"],1,"Sản xuất hàng loạt thường phù hợp hơn với phương pháp khác."),q("Ưu thế nổi bật của in 3D?",["Cá nhân hóa và tạo mẫu nhanh","Không bao giờ lỗi","Không cần thiết kế","In mọi vật liệu"],0,"Cá nhân hóa và tạo mẫu là điểm mạnh."),q("Máy in tạo lớp kế tiếp dựa trên gì?",["Đường chạy từ phần mềm cắt lớp","Màu màn hình","Tên file","Kích thước bàn"],0,"Slicer tạo đường chạy theo từng lớp.")],
-  2:[q("Trục biểu diễn chiều cao thường là?",["X","Y","Z","W"],2,"Z thường là phương thẳng đứng."),q("Đơn vị mặc định phổ biến trong Tinkercad?",["mm","m","inch","px"],0,"Thiết kế in 3D thường dùng milimét."),q("Đổi góc nhìn có đổi kích thước vật thể không?",["Có","Không"],1,"Góc nhìn chỉ đổi cách quan sát."),q("Khối nào phù hợp làm bánh xe?",["Cylinder","Wedge","Box","Cone"],0,"Cylinder là điểm khởi đầu hợp lý."),q("Phân rã vật thể giúp gì?",["Nhận ra các khối đơn giản","Tăng nhiệt nozzle","Tạo G-code","Xóa file"],0,"Ta xây vật phức tạp từ khối cơ bản.")],
-  3:[q("Workplane dùng để?",["Đặt hình","Xuất STL","In ngay","Chấm quiz"],0,"Đó là bề mặt làm việc."),q("ViewCube giúp?",["Đổi góc nhìn","Group","Khoét lỗ","Đổi vật liệu"],0,"ViewCube điều hướng góc nhìn."),q("Công cụ nào hoàn tác?",["Undo","Delete","Mirror","Align"],0,"Undo quay lại thao tác trước."),q("Shapes panel chứa gì?",["Các hình khối","Điểm quiz","G-code","Video"],0,"Bạn kéo shape vào workplane."),q("Đặt tên thiết kế có ích?",["Dễ tìm và nộp đúng","Làm máy in nhanh hơn","Tăng infill","Thay nozzle"],0,"Tên rõ ràng giúp quản lý file.")],
-  4:[q("Muốn nâng vật lên khỏi workplane, đổi trục?",["Z","X","Y","Không trục nào"],0,"Nâng/hạ là chuyển động theo Z."),q("Scale đồng đều nghĩa là?",["Giữ tỉ lệ các chiều","Chỉ đổi X","Chỉ xoay","Tạo lỗ"],0,"Các chiều thay đổi cùng tỉ lệ."),q("Duplicate dùng để?",["Nhân bản","Căn giữa","Khoét lỗ","Xuất file"],0,"Duplicate tạo bản sao."),q("Nhập số tốt hơn kéo mắt khi cần?",["Kích thước chính xác","Màu đẹp","Nhiều layer","Video"],0,"Số đo giúp kiểm soát chính xác."),q("Multiselect cho phép?",["Chọn nhiều vật","In nhiều máy","Mở nhiều web","Lưu nhiều tên"],0,"Chọn nhiều khối để thao tác cùng lúc.")],
-  5:[q("Hole chỉ khoét khi nào?",["Giao Solid và Group","Đứng riêng","Đổi màu","Chưa chọn"],0,"Hole loại phần giao sau Group."),q("Align dùng để?",["Căn vị trí","Đổi nhiệt","Cắt lớp","Tải PDF"],0,"Align căn tâm hoặc mép."),q("Hai khối không giao nhau thì Hole?",["Không tạo lỗ trên Solid","Xóa toàn bộ","Tự dịch chuyển","Tạo support"],0,"Không có vùng giao để loại bỏ."),q("Ungroup để?",["Tách nhóm","Thêm infill","Đổi trục","Xuất PNG"],0,"Ungroup đưa nhóm về thành phần."),q("Chữ khắc chìm thường dùng?",["Text dạng Hole","Text Solid nổi","Mirror","Ruler"],0,"Text Hole khoét chữ vào nền.")],
-  6:[q("Mirror tạo?",["Bản đối xứng","Lỗ","G-code","Quiz"],0,"Mirror lật theo trục."),q("Ruler giúp đọc?",["Vị trí và kích thước","Nhiệt độ phòng","Điểm quiz","Tên lớp"],0,"Ruler phục vụ đo chính xác."),q("Smart Duplicate lặp lại?",["Biến đổi gần nhất","Cả khóa học","Video","File PDF"],0,"Nó lặp phép dịch chuyển/xoay."),q("Workplane tạm hữu ích khi?",["Đặt vật lên bề mặt","Chấm điểm","Đổi theme","Xóa dữ liệu"],0,"Nó tạo bề mặt đặt hình mới."),q("Chọn sai trục Mirror có thể?",["Lật sai hướng","Tăng nhiệt","Mất mạng","Đổi layer"],0,"Luôn kiểm tra hướng trục.")],
-  7:[q("Mô hình in tốt cần các bộ phận?",["Thực sự kết nối","Chỉ chạm trên màn hình","Khác màu","Ẩn"],0,"Các thể tích cần nối hợp lệ."),q("Cách thường giảm support?",["Đổi hướng đặt","Tăng tên file","Đổi theme","Thêm quiz"],0,"Orientation ảnh hưởng vùng overhang."),q("Dung sai cố định cho mọi máy?",["Đúng","Sai"],1,"Nó phụ thuộc máy, vật liệu và profile."),q("Đáy phẳng giúp?",["Tăng tiếp xúc bàn in","Tăng điểm quiz","Đổi màu","Xuất nhanh"],0,"Tiếp xúc tốt hỗ trợ bám bàn."),q("Thành quá mỏng có nguy cơ?",["Không in rõ hoặc yếu","Tự dày lên","Luôn đẹp","Không ảnh hưởng"],0,"Giới hạn phụ thuộc quy trình in.")],
-  8:[q("Bộ phận làm nóng filament?",["Hotend","Build plate","Khung","ViewCube"],0,"Hotend làm nóng trước nozzle."),q("Bộ phận đẩy filament?",["Extruder","Nozzle","Quạt","Khung"],0,"Extruder cấp vật liệu."),q("Nozzle làm gì?",["Đưa nhựa nóng chảy ra","Đỡ cuộn nhựa","Lưu file","Chấm điểm"],0,"Nozzle tạo đường vật liệu."),q("Build plate có vai trò?",["Đỡ và bám lớp đầu","Tạo STL","Quay camera","Lưu quiz"],0,"Sản phẩm hình thành trên bàn in."),q("G-code được đọc bởi?",["Bộ điều khiển máy","Móc khóa","Filament","Ruler"],0,"Bộ điều khiển biến lệnh thành chuyển động.")],
-  9:[q("STL chủ yếu mô tả?",["Bề mặt hình học","Nhiệt độ","Tên học sinh","Điểm quiz"],0,"STL chứa lưới bề mặt."),q("Slicer tạo ra?",["G-code","Ảnh chân dung","Tài khoản","Mật khẩu"],0,"Slicer tạo lệnh máy."),q("Preview trước in để?",["Kiểm tra đường chạy và lỗi","Làm file nặng","Đổi tên lớp","Tắt quạt"],0,"Preview giúp phát hiện vấn đề."),q("Bước sau TEST?",["IMPROVE","ASK","EXPORT","SLICE"],0,"Thiết kế là chu trình cải tiến."),q("Trước export nên kiểm tra?",["Kích thước và mô hình","Điểm mạng","Màu trình duyệt","Ngày sinh"],0,"Kiểm tra trước giúp tránh lãng phí.")],
-  10:[q("Layer height thấp thường?",["Mịn hơn, lâu hơn","Thô hơn, nhanh hơn luôn","Không đổi","Xóa support"],0,"Nhiều lớp hơn tăng thời gian."),q("Infill là?",["Cấu trúc bên trong","Vỏ ngoài","Tên file","Bàn in"],0,"Infill hỗ trợ bên trong."),q("Brim thường giúp?",["Bám bàn","Đổi màu","Khoét lỗ","Tạo tài khoản"],0,"Brim tăng diện tích tiếp xúc."),q("Support dùng khi?",["Vùng nhô khó tự đỡ","Tên dài","Quiz khó","Màn hình tối"],0,"Support nâng đỡ overhang."),q("Profile tốt nhất cho mọi mô hình?",["Không","Có"],0,"Cần cân bằng theo mục tiêu.")],
-  11:[q("Có nên chạm nozzle vừa in xong?",["Không","Có"],0,"Nozzle có thể gây bỏng."),q("Khi máy bất thường, bước đầu?",["Dừng an toàn và báo giáo viên","Thò tay vào","Tháo máy","Tăng nhiệt"],0,"Ưu tiên an toàn."),q("Warping là?",["Góc cong khỏi bàn","Kéo sợi","Lệch trục màn hình","Mất file"],0,"Bám bàn và co ngót liên quan warping."),q("Nên thay bao nhiêu biến mỗi lần chẩn đoán?",["Một biến có kiểm soát","Tất cả","Không ghi lại","Ngẫu nhiên"],0,"Một thay đổi giúp biết nguyên nhân."),q("Tóc dài khi gần máy?",["Buộc gọn","Để tự do"],0,"Tránh mắc vào bộ phận chuyển động.")],
-  12:[q("Thiết kế tốt bắt đầu từ?",["Nhu cầu người dùng","Một shape ngẫu nhiên","Màu yêu thích","Máy in nhanh"],0,"Vấn đề và người dùng định hướng giải pháp."),q("Tiêu chí tốt nên?",["Đo/kiểm tra được","Mơ hồ","Không liên quan","Không thể thử"],0,"Tiêu chí dùng để đánh giá mẫu."),q("Prototype là?",["Mẫu để thử","Sản phẩm không đổi","Tên bài","Mật khẩu"],0,"Mẫu thử giúp học nhanh."),q("Iteration nghĩa là?",["Lặp cải tiến","Xóa mọi thứ","In không thử","Chỉ phác thảo"],0,"Thiết kế tiến bộ qua vòng lặp."),q("Sau khi test nên?",["Ghi phản hồi và cải tiến","Bỏ qua kết quả","Luôn nộp ngay","Đổi người dùng"],0,"Dữ liệu thử nghiệm dẫn đến cải tiến.")]
+1:[
+q('Thuật ngữ nào mô tả chính xác nguyên lý của in 3D?',['Sản xuất bồi đắp','Đúc ép phun','Sản xuất cắt gọt','Dập nguội'],0,'In 3D thêm vật liệu theo từng lớp nên thuộc sản xuất bồi đắp.'),
+q('In 3D khác phay CNC ở điểm cốt lõi nào?',['In 3D dùng khuôn','In 3D tạo nhiều phoi hơn','In 3D đắp lớp, CNC loại bỏ vật liệu','Cả hai đều gọt phôi'],2,'Một phương pháp thêm vật liệu, phương pháp kia lấy vật liệu đi.'),
+q('Bước nào chia mô hình thành các lớp và tính đường đi đầu phun?',['Slicing','Nạp filament','Hậu kỳ','CAD'],0,'Slicer tạo lớp và đường chạy G-code.'),
+q('Hạn chế đúng của in 3D là gì?',['Không dùng được trong y tế','Không tạo được khối rỗng','Luôn tạo nhiều phế liệu','Không tối ưu cho hàng triệu sản phẩm'],3,'Sản xuất hàng loạt rất lớn thường phù hợp hơn với công nghệ khác.'),
+q('Ứng dụng nổi bật trong kiến trúc?',['In bản vẽ giấy','Sản xuất xi măng','Tạo sa bàn và mô hình thu nhỏ','Làm trần thạch cao'],2,'In 3D giúp chế tạo nhanh mô hình công trình.')],
+2:[
+q('Trong hệ trục 3D, trục Z thường biểu diễn gì?',['Chiều ngang','Chiều sâu','Chiều cao'],2,'Z thường là phương thẳng đứng.'),
+q('Đơn vị tiêu chuẩn phổ biến trong thiết kế in 3D?',['Mét','Milimét','Centimét'],1,'Milimét hỗ trợ độ chính xác kỹ thuật.'),
+q('Torus giống vật thể nào nhất?',['Kim tự tháp','Bánh donut','Lon nước'],1,'Torus là khối dạng vòng.'),
+q('Góc nhìn nào tạo cảm giác chiều sâu giống mắt người?',['Front','Top','Perspective'],2,'Perspective là góc phối cảnh.'),
+q('Ngôi nhà đơn giản có thể phân rã thành?',['Box + Wedge','Sphere + Cylinder','Cone + Torus'],0,'Box làm thân và Wedge làm mái là lựa chọn hợp lý.')],
+3:[
+q('Lưới xanh dùng đặt mô hình trong Tinkercad gọi là gì?',['ViewCube','Workplane','Shapes panel','Group'],1,'Workplane là mặt phẳng làm việc.'),
+q('Đưa một khối vào vùng thiết kế bằng cách nào?',['Nhấp đúp Workplane','Gõ tên khối','Kéo từ Shapes panel vào Workplane'],2,'Tinkercad dùng thao tác kéo thả shape.'),
+q('ViewCube dùng để làm gì?',['Đổi tên file','Chứa shape','Đổi nhanh góc nhìn'],2,'ViewCube điều hướng Top, Front, Side…'),
+q('Lỡ xóa một khối, dùng công cụ nào để lấy lại?',['Undo/Ctrl+Z','Redo/Ctrl+Y','Delete'],0,'Undo hoàn tác hành động vừa thực hiện.'),
+q('Giữ chuột phải và rê chuột dùng để?',['Xoay camera','Zoom','Xóa vật thể'],0,'Chuột phải điều khiển góc nhìn.')],
+4:[
+q('Scale mà không làm biến dạng tỉ lệ cần giữ phím nào?',['Ctrl','Alt','Shift','Tab'],2,'Shift giữ tỉ lệ các chiều khi kéo tay nắm góc.'),
+q('Tay nắm nào nâng vật thể khỏi Workplane?',['Ô trắng góc','Nón đen phía trên','Ô đen cạnh','Vòng cung'],1,'Nón đen điều khiển độ cao Z.'),
+q('Ctrl+D khác Copy/Paste ở điểm nào?',['Chỉ nhân bản một khối','Chính xác hơn','Ghi nhớ và lặp biến đổi','Không khác'],2,'Smart Duplicate lặp chuỗi dịch chuyển/xoay/scale.'),
+q('Muốn xoay tinh hơn thay vì nhảy góc lớn, đặt chuột ở đâu?',['Giữ Alt','Phía ngoài vòng chia độ','Tâm vật thể','Phía trong vòng'],1,'Vùng ngoài vòng xoay cho bước góc nhỏ hơn.'),
+q('Khối cao 10 mm được nâng đáy lên 5 mm; đỉnh cao bao nhiêu?',['5 mm','10 mm','15 mm','20 mm'],2,'Độ cao đỉnh = độ nâng đáy + chiều cao khối.')],
+5:[
+q('Muốn khoét lỗ trụ qua khối hộp, hình trụ phải là?',['Solid','Lock','Hole','Transparent'],2,'Hole loại phần giao với Solid khi Group.'),
+q('Phím tắt Ungroup là gì?',['Ctrl+G','Ctrl+Shift+G','Ctrl+Z','Ctrl+D'],1,'Ctrl+Shift+G rã nhóm.'),
+q('Group Solid với Hole đặt xa nhau sẽ thế nào?',['Báo lỗi','Solid không thay đổi','Solid bị xóa','Hai khối tự hút nhau'],1,'Không có phần giao nên không có vật liệu bị lấy đi.'),
+q('Phím tắt Align là gì?',['A','L','M','D'],1,'L mở công cụ căn chỉnh.'),
+q('Tạo chữ nổi trên móc khóa bằng cách nào?',['Text Hole chìm vào đế','Text Solid nhô trên đế rồi Group','Text Hole lơ lửng','Đặt xa rồi Align'],1,'Chữ nổi phải là Solid giao với phần đế.')],
+6:[
+q('Phím đặt Workplane phụ lên bề mặt vật thể?',['R','W','M','S'],1,'W kích hoạt Workplane.'),
+q('Smart Duplicate có khả năng nào?',['Giảm dung lượng','Lặp phép biến đổi trước','Chỉ dùng cho Hole','Đổi màu vật thể'],1,'Ctrl+D có thể ghi nhớ dịch chuyển và xoay.'),
+q('Tạo hai bàn tay robot đối xứng dùng công cụ nào?',['Rotate','Align','Mirror','Scale'],2,'Mirror lật đối tượng qua trục.'),
+q('Trở về Workplane gốc bằng cách nào?',['Esc','W rồi click vùng trống','Ctrl+Z','Xóa mô hình'],1,'Đặt lại Workplane trên mặt phẳng gốc.'),
+q('Ruler cung cấp thông tin đặc biệt nào?',['Trọng lượng','Khổ bàn in','Tọa độ từ gốc thước','Thời gian in'],2,'Ruler hiển thị vị trí tuyệt đối và kích thước.')],
+7:[
+q('Quy tắc 45° liên quan đến khái niệm nào?',['Độ bền nhựa','Overhang có thể cần support','Nhiệt nozzle','Tốc độ bàn'],1,'Góc overhang ảnh hưởng khả năng tự đỡ của lớp in.'),
+q('Nắp hộp cần lắp vừa nên thiết kế lòng nắp thế nào?',['Đúng bằng miệng hộp','Nhỏ hơn','Lớn hơn một chút để có dung sai','Bất kỳ'],2,'Chi tiết lắp ghép cần khoảng hở thử nghiệm.'),
+q('Watertight nghĩa là gì?',['Chống nước tuyệt đối','Bề mặt khép kín, không lỗ hở','Rỗng để chứa nước','Thiết kế bằng Tinkercad'],1,'Watertight mô tả hình học kín/manifold.'),
+q('Cách thường giúp giảm support cho chữ T?',['Đổi hướng đặt phù hợp','Tăng chiều cao','Đổi màu','Giảm nhiệt bàn'],0,'Orientation có thể giảm overhang.'),
+q('Chi tiết mỏng nhất phụ thuộc chủ yếu vào?',['Chiều cao vật','Nozzle, máy và vật liệu','Dung lượng STL','Màu filament'],1,'Giới hạn hình học phụ thuộc hệ thống in cụ thể.')],
+8:[
+q('Bộ phận nung nóng chảy filament?',['Build Plate','Hotend','Extruder motor','Cooling Fan'],1,'Hotend tạo nhiệt để làm chảy nhựa.'),
+q('Đường kính nozzle phổ biến trên máy FDM học đường?',['0,1 mm','0,4 mm','1,75 mm','4 mm'],1,'0,4 mm là kích thước nozzle phổ biến; 1,75 mm thường là đường kính filament.'),
+q('Cooling Fan làm gì?',['Mát động cơ','Làm nguội nhựa vừa phun','Giảm nhiệt bàn','Thổi bụi'],1,'Quạt giúp lớp mới giữ hình dạng.'),
+q('Trục nào nâng cao để in lớp kế tiếp?',['X','Y','Z','E'],2,'Z điều khiển chiều cao lớp.'),
+q('Filament là gì?',['G-code','Sợi vật liệu dạng cuộn','Bàn in','Support'],1,'Filament là nguyên liệu đầu vào của máy FDM.')],
+9:[
+q('Tệp nào thường xuất từ Tinkercad sang Slicer?',['G-code','STL','PDF','DOC'],1,'STL chứa hình học bề mặt.'),
+q('Máy in thực sự đọc tệp nào?',['STL','OBJ','G-code','PNG'],2,'G-code chứa lệnh vận hành máy.'),
+q('Vai trò của Slicer?',['Vẽ mô hình từ đầu','Chia lớp và tính đường chạy','Quét mã','Sửa phần cứng'],1,'Slicer biên dịch hình học thành lệnh in.'),
+q('Thứ tự đúng là?',['Tinkercad → STL → Slicer/G-code → Máy in','G-code → Tinkercad → Slicer','Slicer → STL → Tinkercad','Tinkercad → in trực tiếp'],0,'Mô hình phải qua bước slicing.'),
+q('CHECK trước khi xuất gồm?',['Đổi màu xanh','Kiểm tra kích thước, Group và chi tiết lơ lửng','Tắt máy','Nạp filament'],1,'Kiểm tra hình học giúp tránh lãng phí bản in.')],
+10:[
+q('Thông số nào giúp bề mặt mịn hơn?',['Tăng infill','Giảm Layer Height','Tăng tốc','Bật Brim'],1,'Lớp mỏng hơn thường giảm gờ lớp nhưng tăng thời gian.'),
+q('Infill 100% có luôn tối ưu không?',['Có, luôn đẹp','Không, tốn vật liệu/thời gian và có thể tăng co ngót','Có, khỏi cần support','Không, vì hỏng nozzle'],1,'Mật độ ruột phải phù hợp mục tiêu sử dụng.'),
+q('Brim dùng để làm gì?',['Đỡ overhang','Tăng diện tích bám quanh chân mẫu','Làm rỗng mô hình','Tăng nhiệt hotend'],1,'Brim nối với chân mẫu để giảm bong góc.')],
+11:[
+q('Khi mẫu đang warping, hành động an toàn đầu tiên?',['Dùng tay ấn xuống','Báo giáo viên hoặc dừng an toàn','Phun nước','Tăng tốc 200%'],1,'Không đưa tay vào vùng máy đang chạy/nóng.'),
+q('Các sợi nhựa mảnh giăng giữa hai chi tiết gọi là?',['Warping','Stringing','Layer Shift','Over-extrusion'],1,'Stringing thường liên quan nhiệt độ và retraction.'),
+q('Vì sao không chạm nozzle ngay sau khi in xong?',['Có điện giật','Nozzle vẫn rất nóng, có thể gây bỏng','Làm bẩn nozzle','Làm lệch bàn'],1,'Kim loại giữ nhiệt lâu sau khi bản in hoàn thành.')],
+12:[
+q('Bước đầu của quy trình thiết kế kỹ thuật?',['Mở Tinkercad vẽ ngay','ASK để xác định vấn đề/người dùng','Mua filament','Xuất G-code'],1,'Thiết kế tốt bắt đầu từ nhu cầu thật.'),
+q('Vì sao nên phác thảo kèm kích thước trước khi dựng 3D?',['Để chấm vẽ đẹp','Làm rõ ý tưởng và thao tác chính xác hơn','Máy in quét trực tiếp','Không có tác dụng'],1,'Sketch giúp kiểm tra bố cục và số đo trước khi dựng.'),
+q('Ngàm phone stand bị gãy sau test; nên cải tiến thế nào?',['Bỏ dự án','Chỉ dán keo','Tăng độ dày, bo/vát góc rồi thử lại','Đổi sang móc khóa'],2,'Kết quả thử nghiệm phải dẫn đến thay đổi có lý do.')]
 };
