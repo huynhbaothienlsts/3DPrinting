@@ -9,3 +9,4 @@
 .three-sim-frame.printability-frame{height:760px}
 @media(max-width:650px){.three-sim-frame{height:560px}}
 @media(max-width:650px){.three-sim-frame.printability-frame{height:700px}}
+.lesson-summary{margin:0 0 22px;padding:0;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--card);box-shadow:var(--shadow)}.lesson-summary img{display:block;width:100%;height:auto}.lesson-summary figcaption{padding:10px 16px;color:var(--muted);font-size:.82rem;text-align:center}
