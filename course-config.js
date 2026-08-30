@@ -18,7 +18,8 @@ window.courseConfig = {
     [9,"Từ Tinkercad đến máy in 3D","Export, slice, preview và print"],
     [10,"Các thông số slicing cơ bản","Layer, wall, infill và support"],
     [11,"An toàn và lỗi in thường gặp","Quan sát, chẩn đoán và xử lý an toàn"],
-    [12,"Dự án thiết kế giải quyết vấn đề","Ask, imagine, make, test, improve"]
+    [12,"Dự án thiết kế giải quyết vấn đề","Ask, imagine, make, test, improve"],
+    [13,"Khai thác tài nguyên in 3D online","Tìm, đánh giá, kiểm tra giấy phép và cải tiến mô hình"]
   ].map(([number,title,summary]) => ({
     id:`lesson-${String(number).padStart(2,"0")}`, number, title, summary, enabled:true,
     requiredInteractions:["explore","activity"], theoryAssignmentUrl:"", practiceAssignmentUrl:""

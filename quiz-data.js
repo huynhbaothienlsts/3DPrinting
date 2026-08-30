@@ -65,5 +65,11 @@ q('Vì sao không chạm nozzle ngay sau khi in xong?',['Có điện giật','No
 12:[
 q('Bước đầu của quy trình thiết kế kỹ thuật?',['Mở Tinkercad vẽ ngay','ASK để xác định vấn đề/người dùng','Mua filament','Xuất G-code'],1,'Thiết kế tốt bắt đầu từ nhu cầu thật.'),
 q('Vì sao nên phác thảo kèm kích thước trước khi dựng 3D?',['Để chấm vẽ đẹp','Làm rõ ý tưởng và thao tác chính xác hơn','Máy in quét trực tiếp','Không có tác dụng'],1,'Sketch giúp kiểm tra bố cục và số đo trước khi dựng.'),
-q('Ngàm phone stand bị gãy sau test; nên cải tiến thế nào?',['Bỏ dự án','Chỉ dán keo','Tăng độ dày, bo/vát góc rồi thử lại','Đổi sang móc khóa'],2,'Kết quả thử nghiệm phải dẫn đến thay đổi có lý do.')]
+q('Ngàm phone stand bị gãy sau test; nên cải tiến thế nào?',['Bỏ dự án','Chỉ dán keo','Tăng độ dày, bo/vát góc rồi thử lại','Đổi sang móc khóa'],2,'Kết quả thử nghiệm phải dẫn đến thay đổi có lý do.')],
+13:[
+q('Dấu hiệu đáng tin cậy nhất khi chọn mô hình để in?',['Ảnh render đẹp','Tên file ngắn','Ảnh bản in thật, mô tả và phản hồi của người dùng','Nhiều màu sắc'],2,'Ảnh bản in thật và thông tin thực nghiệm cho biết mô hình đã được kiểm chứng tốt hơn.'),
+q('Tệp miễn phí có luôn được phép bán sản phẩm in ra không?',['Có','Không, phải đọc giấy phép của từng mô hình','Chỉ khi là STL','Chỉ khi không đổi kích thước'],1,'Miễn phí tải xuống không đồng nghĩa với quyền sử dụng thương mại.'),
+q('Việc cần làm trước khi bấm Print với file tải về?',['Đổi màu mô hình','Kiểm tra kích thước, hướng đặt, từng lớp, support và profile trong slicer','Đổi tên tác giả','Tăng infill 100%'],1,'Slicer giúp phát hiện nhiều rủi ro trước khi tốn thời gian và vật liệu.'),
+q('Cách ghi nguồn đầy đủ nhất?',['Chỉ ghi tên website','Tên mô hình, tác giả, link, giấy phép, ngày truy cập và thay đổi','Chụp màn hình','Chỉ ghi “Internet”'],1,'Phiếu nguồn đầy đủ giúp tôn trọng tác giả và truy lại đúng phiên bản.'),
+q('Khai thác tài nguyên hiệu quả nhất là gì?',['Tải mẫu đầu tiên và in ngay','Tìm nhiều ứng viên, đánh giá, thử nhỏ và cải tiến theo nhu cầu','Chỉ chọn mẫu nhiều lượt thích','Đăng lại file lên trang khác'],1,'Quy trình có đánh giá và thử nghiệm giúp chọn mô hình phù hợp, an toàn và có trách nhiệm.')]
 };
