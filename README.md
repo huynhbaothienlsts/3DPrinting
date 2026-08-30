@@ -15,7 +15,9 @@ Không mở trực tiếp bằng `file://` vì trình duyệt có thể chặn v
 
 ## Cấu hình khóa học
 
-Sửa `course-config.js` để thay `teacherName`, `passingScore`, `sequentialUnlock`, danh sách lớp và trạng thái bài học. Hai URL Canvas độc lập nằm ở `theoryAssignmentUrl` và `practiceAssignmentUrl`; khi để trống, nút tương ứng sẽ không hiển thị.
+Sửa `course-config.js` để thay danh sách `teachers`, `passingScore`, `sequentialUnlock`, danh sách lớp và trạng thái bài học. Hai URL Canvas độc lập nằm ở `theoryAssignmentUrl` và `practiceAssignmentUrl`; khi để trống, nút tương ứng sẽ không hiển thị.
+
+Để giáo viên kiểm tra nhanh chứng nhận mà không cần hoàn thành hoạt động, thêm `?action=certificate` vào trang bài, ví dụ `lesson-05.html?action=certificate`. Chế độ này tự điền tên `Huỳnh Bảo Thiên`, lớp `6A1`, chọn giáo viên đầu tiên và mở ngay bản xem trước.
 
 Muốn thêm bài, thêm một mục trong `course-config.js`, nội dung tương ứng trong `lesson-data.js`, và bộ câu hỏi trong `quiz-data.js`. Logic trang bài học tự đọc dữ liệu này.
 

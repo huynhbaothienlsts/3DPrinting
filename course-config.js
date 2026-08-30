@@ -1,6 +1,6 @@
 window.courseConfig = {
   courseName: "Thiết kế và In 3D",
-  teacherName: "Huỳnh Bảo Thiên",
+  teachers: ["Huỳnh Bảo Thiên", "Nguyễn Đình Vương"],
   passingScore: 80,
   sequentialUnlock: false,
   saveStudentIdentity: false,
