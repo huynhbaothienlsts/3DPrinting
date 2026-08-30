@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bài 7 - Printability Inspector</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Segoe UI,Arial,sans-serif;background:#eef4f8;color:#1e293b}body{padding:14px}.game{max-width:1180px;margin:auto;padding:20px;border-radius:13px;background:#fff;box-shadow:0 5px 22px rgba(0,0,0,.09)}h1{text-align:center;font-size:21px;margin:0 0 5px}.subtitle{text-align:center;color:#64748b;font-size:13px;margin:0 0 16px}.table-wrap{overflow-x:auto}table{width:100%;min-width:780px;border-collapse:collapse;margin-bottom:18px}th{padding:10px;background:#17324b;color:#fff;border:1px solid #334b60;font-size:12px}td{width:25%;padding:6px;border:1px solid #cbd5e1;vertical-align:top}.rowhead{background:#f8fafc;text-align:center;font-weight:800;font-size:13px;vertical-align:middle}.zone{min-height:72px;display:flex;align-items:center;justify-content:center;padding:5px;border:2px dashed #cbd5e1;border-radius:7px;background:#f1f5f9;transition:.18s}.zone.over{border-color:#0284c7;background:#e0f2fe}.zone.correct{border-style:solid;border-color:#22c55e;background:#f0fdf4}.zone.wrong{border-style:solid;border-color:#ef4444;background:#fef2f2}.poolbox{padding:13px;border:2px solid #e2e8f0;border-radius:9px;background:#f8fafc}.pooltitle{margin-bottom:9px;color:#475569;font-size:12px;font-weight:850;text-transform:uppercase}.pool{display:flex;flex-wrap:wrap;gap:8px;min-height:86px}.card{flex:1 1 calc(25% - 8px);min-width:175px;padding:9px 10px;border:1px solid #cbd5e1;border-left:4px solid #0284c7;border-radius:6px;background:#fff;font-size:11px;cursor:grab;box-shadow:0 2px 5px rgba(0,0,0,.05)}.card.selected{outline:3px solid #f59e0b;background:#fff8df}.card.dragging{opacity:.45}.controls{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px}button{padding:10px 20px;border:0;border-radius:7px;color:#fff;font-weight:800;cursor:pointer}.check{background:#0284c7}.reset{background:#64748b}.score{font-weight:850}.hint{text-align:center;margin:9px 0 0;color:#64748b;font-size:11px}@media(max-width:600px){body{padding:7px}.game{padding:11px}h1{font-size:17px}.card{min-width:145px}.subtitle{font-size:11px}}
+</style>
+</head>
+<body>
+<main class="game">
+<h1>3D Printability Inspector</h1>
+<p class="subtitle">Ghép hiện tượng, nguyên nhân và giải pháp vào đúng lỗi thiết kế.</p>
+<div class="table-wrap"><table><thead><tr><th>Lỗi thiết kế</th><th>Hiện tượng trên mô hình</th><th>Nguyên nhân</th><th>Giải pháp cải tiến</th></tr></thead><tbody>
+<tr><td class="rowhead">Thành quá mỏng</td><td><div class="zone" data-target="r1c1"></div></td><td><div class="zone" data-target="r1c2"></div></td><td><div class="zone" data-target="r1c3"></div></td></tr>
+<tr><td class="rowhead">Chi tiết lơ lửng</td><td><div class="zone" data-target="r2c1"></div></td><td><div class="zone" data-target="r2c2"></div></td><td><div class="zone" data-target="r2c3"></div></td></tr>
+<tr><td class="rowhead">Overhang quá sâu</td><td><div class="zone" data-target="r3c1"></div></td><td><div class="zone" data-target="r3c2"></div></td><td><div class="zone" data-target="r3c3"></div></td></tr>
+<tr><td class="rowhead">Không có dung sai</td><td><div class="zone" data-target="r4c1"></div></td><td><div class="zone" data-target="r4c2"></div></td><td><div class="zone" data-target="r4c3"></div></td></tr>
+</tbody></table></div>
+<section class="poolbox"><div class="pooltitle">Các thẻ nội dung đã xáo trộn</div><div class="pool" id="pool"></div><p class="hint">Kéo thẻ vào ô, hoặc nhấp chọn một thẻ rồi nhấp vào ô cần đặt.</p></section>
+<div class="controls"><button class="check" id="check">Kiểm tra kết quả</button><button class="reset" id="reset">Làm lại</button><span class="score" id="score" aria-live="polite"></span></div>
+</main>
+<script>
+const cards=[
+{id:'r1c1',text:'Vách mô hình mỏng 0,2 mm'},{id:'r1c2',text:'Nhỏ hơn đường kính nozzle chuẩn 0,4 mm'},{id:'r1c3',text:'Tăng độ dày thành lên tối thiểu 1,2 mm'},
+{id:'r2c1',text:'Quả cầu nằm lơ lửng trên không'},{id:'r2c2',text:'Không có đế bám vào bàn in'},{id:'r2c3',text:'Đặt quả cầu chạm sàn hoặc tạo chân chống'},
+{id:'r3c1',text:'Mái nhà chìa ngang ra 90°'},{id:'r3c2',text:'Máy in không thể phun nhựa vào không khí'},{id:'r3c3',text:'Đổi hướng đặt vật thể hoặc vát góc 45°'},
+{id:'r4c1',text:'Trục 10 mm nhét vào lỗ 10 mm'},{id:'r4c2',text:'Nhựa nở nhẹ khiến khớp nối bị kẹt chặt'},{id:'r4c3',text:'Làm lỗ rộng 10,3 mm, chừa dung sai 0,3 mm'}];
+const pool=document.getElementById('pool'),zones=[...document.querySelectorAll('.zone')],score=document.getElementById('score');let dragged=null,selected=null,reported=false;function choose(card){document.querySelectorAll('.card.selected').forEach(x=>x.classList.remove('selected'));selected=card;card?.classList.add('selected')}
+function makeCard(data){const card=document.createElement('div');card.className='card';card.draggable=true;card.textContent=data.text;card.dataset.id=data.id;card.onclick=event=>{event.stopPropagation();choose(selected===card?null:card)};card.ondragstart=event=>{dragged=card;card.classList.add('dragging');event.dataTransfer.setData('text/plain',data.id)};card.ondragend=()=>{card.classList.remove('dragging');dragged=null};return card}
+function place(zone,card){if(!card)return;if(zone.firstElementChild)pool.appendChild(zone.firstElementChild);zone.appendChild(card);zone.classList.remove('correct','wrong');choose(null)}
+function init(){pool.innerHTML='';zones.forEach(zone=>{zone.innerHTML='';zone.classList.remove('correct','wrong','over')});score.textContent='';reported=false;choose(null);const shuffled=[...cards];for(let i=shuffled.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]]}shuffled.forEach(data=>pool.appendChild(makeCard(data)))}
+zones.forEach(zone=>{zone.ondragover=event=>{event.preventDefault();zone.classList.add('over')};zone.ondragleave=()=>zone.classList.remove('over');zone.ondrop=event=>{event.preventDefault();zone.classList.remove('over');place(zone,dragged)};zone.onclick=()=>place(zone,selected)});pool.ondragover=event=>event.preventDefault();pool.ondrop=event=>{event.preventDefault();if(dragged)pool.appendChild(dragged)};pool.onclick=event=>{if(event.target===pool)choose(null)};
+document.getElementById('check').onclick=()=>{let correct=0;zones.forEach(zone=>{zone.classList.remove('correct','wrong');const item=zone.querySelector('.card'),ok=item?.dataset.id===zone.dataset.target;zone.classList.add(ok?'correct':'wrong');if(ok)correct++});score.textContent=`Kết quả: ${correct}/12 vị trí chính xác`;score.style.color=correct===12?'#16823a':'#c92f2f';if(correct===12&&!reported){reported=true;parent.postMessage({type:'lesson-sim-complete',lesson:7},location.origin)}};document.getElementById('reset').onclick=init;init();
+</script>
+</body>
+</html>
